@@ -1,36 +1,27 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# Bytenet with masking
 
-TODO: Write a project description
+A Machine Translation Tensorflow Implementation
+Paper: [Neural Machine Translation in Linear Time](https://arxiv.org/abs/1610.10099)
 
-## Installation
+## Notes
+    * Few model structure is different from the paper
+        * I used the IWSLT 2016 de-en dataset and the code to process the dataset has changed slightly from [original code of Kyubyung](https://github.com/Kyubyong/bytenet_translation)
+        * I didn't implement 'Dynamic Unfolding'
+        * I apply the masking for all residual blocks to eliminate the influence of pad embedding
 
-TODO: Describe the installation process
+## Requirements
 
-## Usage
+    * Tensorflow >= 1.0.0
+    * Numpy >= 1.11.1
+    * nltk > 3.2.2
 
 TODO: Write usage instructions
 
-## Contributing
+## Steps
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+1. Download [IWSLT 2016 German–English parallel corpus](https://wit3.fbk.eu/download.php?release=2016-01&type=texts&slang=de&tlang=en) and extract it to `data/` folder.
+2. Run 'train.py' with specific hyper parameters.
+3. Run 'translate.py' with same hyper parameters as above.
 
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
-
-## License
-
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+## Results
+I got the Blue Score 8.44 after 20 epochs. However, I got the Bleu score 44.69 by in-sampled data with embedding size 512, and I think it means that the model maybe trained well but overfitted. Therefore I suggest that you should try to run this model with larger dataset.
