@@ -23,4 +23,4 @@ Paper: [Neural Machine Translation in Linear Time](https://arxiv.org/abs/1610.10
 3. Run 'translate.py' with same hyper parameters as above.
 
 ## Results
-I got the Blue Score 8.44 after 20 epochs. However, I got the Bleu score 44.69 by in-sampled data with embedding size 512, and I think it means that the model maybe trained well but overfitted. Therefore I suggest that you should try to run this model with larger dataset.
+I got the Bleu Score 8.44 after 20 epochs. However, I got the Bleu score 44.69 by in-sampled data with embedding size 512, and I think it means that the model maybe trained well but overfitted. Therefore I suggest that you should try to run this model with larger dataset.
