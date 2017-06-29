@@ -8,6 +8,7 @@ Paper: [Neural Machine Translation in Linear Time](https://arxiv.org/abs/1610.10
     * I used the IWSLT 2016 de-en dataset and the code to process the dataset has changed slightly from [original code of Kyubyung](https://github.com/Kyubyong/bytenet_translation)
     * I didn't implement 'Dynamic Unfolding'
     * I apply the masking for all residual blocks to eliminate the influence of pad embedding
+    * I apply dropout just before the summation of residual block output.
 
 ## Requirements
 
