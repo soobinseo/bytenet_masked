@@ -4,18 +4,16 @@ A Machine Translation Tensorflow Implementation
 Paper: [Neural Machine Translation in Linear Time](https://arxiv.org/abs/1610.10099)
 
 ## Notes
-    * Few model structure is different from the paper
-        * I used the IWSLT 2016 de-en dataset and the code to process the dataset has changed slightly from [original code of Kyubyung](https://github.com/Kyubyong/bytenet_translation)
-        * I didn't implement 'Dynamic Unfolding'
-        * I apply the masking for all residual blocks to eliminate the influence of pad embedding
+  * Few model structure is different from the paper
+    * I used the IWSLT 2016 de-en dataset and the code to process the dataset has changed slightly from [original code of Kyubyung](https://github.com/Kyubyong/bytenet_translation)
+    * I didn't implement 'Dynamic Unfolding'
+    * I apply the masking for all residual blocks to eliminate the influence of pad embedding
 
 ## Requirements
 
-    * Tensorflow >= 1.0.0
-    * Numpy >= 1.11.1
-    * nltk > 3.2.2
-
-TODO: Write usage instructions
+  * Tensorflow >= 1.0.0
+  * Numpy >= 1.11.1
+  * nltk > 3.2.2
 
 ## Steps
 
